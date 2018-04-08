@@ -10,6 +10,7 @@
 		C0F0E5CF2079D32200222E9B /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = C0F0E5CE2079D32200222E9B /* main.c */; };
 		C0F0E5D82079D37200222E9B /* double_link.c in Sources */ = {isa = PBXBuildFile; fileRef = C0F0E5D72079D37200222E9B /* double_link.c */; };
 		C0F0E5DB2079D5D500222E9B /* double_link_test.c in Sources */ = {isa = PBXBuildFile; fileRef = C0F0E5DA2079D5D500222E9B /* double_link_test.c */; };
+		C0F0E5DF2079E42700222E9B /* stcak.c in Sources */ = {isa = PBXBuildFile; fileRef = C0F0E5DE2079E42700222E9B /* stcak.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		C0F0E5D72079D37200222E9B /* double_link.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = double_link.c; sourceTree = "<group>"; };
 		C0F0E5D92079D5D500222E9B /* double_link_test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = double_link_test.h; sourceTree = "<group>"; };
 		C0F0E5DA2079D5D500222E9B /* double_link_test.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = double_link_test.c; sourceTree = "<group>"; };
+		C0F0E5DD2079E42700222E9B /* stcak.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stcak.h; sourceTree = "<group>"; };
+		C0F0E5DE2079E42700222E9B /* stcak.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = stcak.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,7 @@
 		C0F0E5CD2079D32200222E9B /* algorithm */ = {
 			isa = PBXGroup;
 			children = (
+				C0F0E5DC2079E41400222E9B /* stack */,
 				C0F0E5D52079D36700222E9B /* double_link */,
 				C0F0E5CE2079D32200222E9B /* main.c */,
 			);
@@ -78,6 +82,15 @@
 				C0F0E5DA2079D5D500222E9B /* double_link_test.c */,
 			);
 			path = double_link;
+			sourceTree = "<group>";
+		};
+		C0F0E5DC2079E41400222E9B /* stack */ = {
+			isa = PBXGroup;
+			children = (
+				C0F0E5DD2079E42700222E9B /* stcak.h */,
+				C0F0E5DE2079E42700222E9B /* stcak.c */,
+			);
+			path = stack;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +152,7 @@
 			files = (
 				C0F0E5D82079D37200222E9B /* double_link.c in Sources */,
 				C0F0E5DB2079D5D500222E9B /* double_link_test.c in Sources */,
+				C0F0E5DF2079E42700222E9B /* stcak.c in Sources */,
 				C0F0E5CF2079D32200222E9B /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
