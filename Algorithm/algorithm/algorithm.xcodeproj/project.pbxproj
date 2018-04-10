@@ -12,6 +12,7 @@
 		C0F0E5DB2079D5D500222E9B /* double_link_test.c in Sources */ = {isa = PBXBuildFile; fileRef = C0F0E5DA2079D5D500222E9B /* double_link_test.c */; };
 		C0F0E5DF2079E42700222E9B /* stcak.c in Sources */ = {isa = PBXBuildFile; fileRef = C0F0E5DE2079E42700222E9B /* stcak.c */; };
 		C0F0E639207B29D600222E9B /* BTree.c in Sources */ = {isa = PBXBuildFile; fileRef = C0F0E638207B29D600222E9B /* BTree.c */; };
+		C0F0E66D207C731300222E9B /* AVLTree.c in Sources */ = {isa = PBXBuildFile; fileRef = C0F0E66C207C731300222E9B /* AVLTree.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +38,8 @@
 		C0F0E5DE2079E42700222E9B /* stcak.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = stcak.c; sourceTree = "<group>"; };
 		C0F0E637207B29D600222E9B /* BTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTree.h; sourceTree = "<group>"; };
 		C0F0E638207B29D600222E9B /* BTree.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = BTree.c; sourceTree = "<group>"; };
+		C0F0E66B207C731300222E9B /* AVLTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVLTree.h; sourceTree = "<group>"; };
+		C0F0E66C207C731300222E9B /* AVLTree.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = AVLTree.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +105,8 @@
 			children = (
 				C0F0E637207B29D600222E9B /* BTree.h */,
 				C0F0E638207B29D600222E9B /* BTree.c */,
+				C0F0E66B207C731300222E9B /* AVLTree.h */,
+				C0F0E66C207C731300222E9B /* AVLTree.c */,
 			);
 			path = tree;
 			sourceTree = "<group>";
@@ -166,6 +171,7 @@
 				C0F0E5D82079D37200222E9B /* double_link.c in Sources */,
 				C0F0E639207B29D600222E9B /* BTree.c in Sources */,
 				C0F0E5DB2079D5D500222E9B /* double_link_test.c in Sources */,
+				C0F0E66D207C731300222E9B /* AVLTree.c in Sources */,
 				C0F0E5DF2079E42700222E9B /* stcak.c in Sources */,
 				C0F0E5CF2079D32200222E9B /* main.c in Sources */,
 			);
