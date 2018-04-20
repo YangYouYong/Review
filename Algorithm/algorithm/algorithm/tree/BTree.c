@@ -327,7 +327,10 @@ void print_bstree(BSTree tree, Type key, int direction)
         if(direction==0)    // tree是根节点
             printf("%2d is root\n", tree->key);
         else                // tree是分支节点
-            printf("%2d is %2d's %6s child\n", tree->key, key, direction==1?"right" : "left");
+//            printf("%2d is %2d's %6s child\n", tree->key, key, direction==1?"right" : "left");
+        
+//        printf("%2d %2s %2d \n", tree->key, direction==1? "->" : "->" ,key);
+            printf("%2d %2s %2d \n", tree->key, "--", key);
         
         print_bstree(tree->left, tree->key, -1);
         print_bstree(tree->right,tree->key,  1);

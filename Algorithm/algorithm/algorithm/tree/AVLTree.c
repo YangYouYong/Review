@@ -387,7 +387,8 @@ void print_avltree(AVLTree tree, Type key, int direction)
         if(direction==0)    // tree是根节点
             printf("%2d is root\n", tree->key);
         else                // tree是分支节点
-            printf("%2d is %2d's %6s child\n", tree->key, key, direction==1?"right" : "left");
+//            printf("%2d is %2d's %6s child\n", tree->key, key, direction==1?"right" : "left");
+        printf("%2d %2s %2d \n", key, "--", tree->key);
         
         print_avltree(tree->left, tree->key, -1);
         print_avltree(tree->right,tree->key,  1);
