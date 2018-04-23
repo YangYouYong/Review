@@ -14,15 +14,18 @@ void foo(){
     printf("foo method called \n");
 }
 
-void mobjectMethod(){
+// as root method
+void mobject_method(){
     printf("mobjectMethod method called \n");
 }
 
-void catMethod(){
+// as override method
+void cat_method(){
     printf("catMethod method called \n");
 }
 
 int main(int argc, const char * argv[]) {
+    
     
     PropertyNode *name = create_propertynode("name", "jack", NULL);
     PropertyNode *sex = create_propertynode("sex", "sex", NULL);
@@ -37,8 +40,10 @@ int main(int argc, const char * argv[]) {
     
     callMethod(obj, "foo");
     
-    MethodNode *objectMethod = create_methodnode("object", mobjectMethod, NULL, NULL);
-    MethodNode *catObjectMethod = create_methodnode("object", catMethod, NULL, NULL);
+    MethodNode *objectMethod = create_methodnode("object", mobject_method, NULL, NULL);
+    MethodNode *catObjectMethod = create_methodnode("object", cat_method, NULL, NULL);
+    
+    Cat *catWithNoMethodImpl = createCat(NULL, NULL);
     
     Cat *catWithParentMethod = createCat(NULL, NULL);
     add_methodnode((MObject *)catWithParentMethod, objectMethod);
@@ -52,7 +57,10 @@ int main(int argc, const char * argv[]) {
     callMethod((MObject *)catWithOverrideMethod, "object");
     
     printf("property: %s \n", get_property(obj, "name"));
+    callMethod((MObject *)catWithNoMethodImpl, "object");
+
     // insert code here...
     printf("Hello, World!\n");
+
     return 0;
 }

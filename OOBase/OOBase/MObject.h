@@ -10,6 +10,7 @@
 #define MObject_h
 
 #include <stdio.h>
+
 typedef int Key;
 
 typedef void(*function_ptr)(void);
@@ -17,7 +18,7 @@ typedef void(*function_ptr)(void);
 typedef struct PropertyNode{
     Key key;
     char *propertyName;
-    char *propertyData; // can use void *
+    char *propertyData; // can use void *  and add a type keyword
     struct PropertyNode *superNode;
     struct PropertyNode *next;  // property list
     

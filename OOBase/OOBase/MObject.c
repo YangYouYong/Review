@@ -61,7 +61,9 @@ MethodNode* find_method(MObject *target,
     if (node == NULL) {
         MObject *parent = target->superNode;
         MObject *currentInherritNode = target;
+        
         while (parent != NULL && parent != currentInherritNode) {
+            
             MethodNode *targetNode = find_method(parent, methodName);
             if (targetNode != NULL) {
                 node = targetNode;
@@ -69,7 +71,9 @@ MethodNode* find_method(MObject *target,
             }
         }
         if (node == NULL) {
-            printf("method did not implementation : %s",methodName);
+            printf("method did not implementation : %s\n",methodName);
+            // throws exception here
+            exit(10);
         }
     }
     
@@ -149,7 +153,7 @@ void add_methodnode(MObject *target,
         existMethodNode = rootNode;
     }
     
-    // replace need double link
+    // TODO: replace method list datastructure with double link
     if (existMethodNode != NULL) {
         
     }
