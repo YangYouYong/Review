@@ -56,6 +56,23 @@ MethodNode* find_method(MObject *target,
         }
         node = node->next;
     }
+    
+    // inherit logic
+    if (node == NULL) {
+        MObject *parent = target->superNode;
+        MObject *currentInherritNode = target;
+        while (parent != NULL && parent != currentInherritNode) {
+            MethodNode *targetNode = find_method(parent, methodName);
+            if (targetNode != NULL) {
+                node = targetNode;
+                break;
+            }
+        }
+        if (node == NULL) {
+            printf("method did not implementation : %s",methodName);
+        }
+    }
+    
     return node;
 }
 
@@ -104,14 +121,37 @@ void add_methodnode(MObject *target,
         target->rootMethodNode = methodNode;
         return;
     }
+    
+    MethodNode *existMethodNode = NULL;
+    
     MethodNode *rootNode = target->rootMethodNode->next;
     if (rootNode == NULL) {
         target->rootMethodNode->next = methodNode;
+        
+        // exist method logic
+        if (target->rootMethodNode->methodName == methodNode->methodName) {
+            existMethodNode = target->rootMethodNode;
+        }
+        // replace
+        target->rootMethodNode = methodNode;
+        
+        free(existMethodNode);
         return;
     }
     
     while (rootNode != NULL) {
+        if (rootNode->methodName == methodNode->methodName) {
+            existMethodNode = rootNode;
+        }
         rootNode = rootNode->next;
+    }
+    if (rootNode->methodName == methodNode->methodName) {
+        existMethodNode = rootNode;
+    }
+    
+    // replace need double link
+    if (existMethodNode != NULL) {
+        
     }
     
     rootNode->next = methodNode;

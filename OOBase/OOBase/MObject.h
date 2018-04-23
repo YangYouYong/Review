@@ -42,25 +42,27 @@ typedef struct MObject{
     
 } MObject;
 
-extern PropertyNode* create_propertynode(char *name,
-                                         char *value,
-                                         PropertyNode *parent);
+PropertyNode* create_propertynode(char *name,
+                                     char *value,
+                                     PropertyNode *parent);
 
-extern MethodNode* create_methodnode(char *name,
-                                     function_ptr methodImp,
-                                     PropertyNode *parmsList,
-                                     MethodNode *parent);
+MethodNode* create_methodnode(char *name,
+                             function_ptr methodImp,
+                             PropertyNode *parmsList,
+                             MethodNode *parent);
 
-extern void add_propertynode(MObject *target,
-                             PropertyNode *propertyNode);
+void add_propertynode(MObject *target,
+                        PropertyNode *propertyNode);
 
-extern void add_methodnode(MObject *target,
-                           MethodNode *methodNode);
+void add_methodnode(MObject *target,
+                        MethodNode *methodNode);
 
-extern MObject *createObject(PropertyNode *propertyNode, MethodNode *method);
-extern void callMethod(MObject *target, char *methodName);
+MObject *createObject(PropertyNode *propertyNode,
+                      MethodNode *method);
 
-extern char *get_property(MObject *target, char *propertyName);
+void callMethod(MObject *target, char *methodName);
+
+char *get_property(MObject *target, char *propertyName);
 
 
 #endif /* MObject_h */
