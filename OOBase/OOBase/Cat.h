@@ -24,7 +24,6 @@ typedef struct Cat{
     
 } Cat;
 
-Cat *createCat(PropertyNode *propertyNode,
-                      MethodNode *method);
+Cat *createCat();
 
 #endif /* Cat_h */

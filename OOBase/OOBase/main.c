@@ -31,7 +31,7 @@ int main(int argc, const char * argv[]) {
     PropertyNode *sex = create_propertynode("sex", "sex", NULL);
     MethodNode *fooMethod = create_methodnode("foo", foo, NULL, NULL);
     
-    MObject *obj = createObject(NULL, NULL);
+    MObject *obj = createObject();
     
     add_propertynode(obj, name);
     add_propertynode(obj, sex);
@@ -43,12 +43,12 @@ int main(int argc, const char * argv[]) {
     MethodNode *objectMethod = create_methodnode("object", mobject_method, NULL, NULL);
     MethodNode *catObjectMethod = create_methodnode("object", cat_method, NULL, NULL);
     
-    Cat *catWithNoMethodImpl = createCat(NULL, NULL);
+    Cat *catWithNoMethodImpl = createCat();
     
-    Cat *catWithParentMethod = createCat(NULL, NULL);
+    Cat *catWithParentMethod = createCat();
     add_methodnode((MObject *)catWithParentMethod, objectMethod);
     
-    Cat *catWithOverrideMethod = createCat(NULL, NULL);
+    Cat *catWithOverrideMethod = createCat();
     
     add_methodnode((MObject *)catWithOverrideMethod, objectMethod);
     add_methodnode((MObject *)catWithOverrideMethod, catObjectMethod);

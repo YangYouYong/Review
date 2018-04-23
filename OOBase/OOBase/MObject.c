@@ -161,15 +161,14 @@ void add_methodnode(MObject *target,
     rootNode->next = methodNode;
 }
 
-MObject *createObject(PropertyNode *propertyNode,
-                      MethodNode *method)
+MObject *createObject()
 {
     MObject* obj;
     
     if ((obj = (MObject *)malloc(sizeof(MObject))) == NULL)
         return NULL;
-    obj->rootPropertyNode = propertyNode;
-    obj->rootMethodNode = method;
+    obj->rootPropertyNode = NULL;
+    obj->rootMethodNode = NULL;
     obj->extensionObj = NULL;
     obj->superNode = obj;  //  base class parent -> self
     

@@ -58,8 +58,7 @@ void add_propertynode(MObject *target,
 void add_methodnode(MObject *target,
                         MethodNode *methodNode);
 
-MObject *createObject(PropertyNode *propertyNode,
-                      MethodNode *method);
+MObject *createObject(void);
 
 void callMethod(MObject *target, char *methodName);
 
